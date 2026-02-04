@@ -1,0 +1,40 @@
+# Ripgrep configuration
+
+# Search hidden files by default
+--hidden
+
+# Follow symlinks
+--follow
+
+# Smart case (case insensitive unless uppercase used)
+--smart-case
+
+# Add line numbers
+--line-number
+
+# Show column numbers
+--column
+
+# Ignore common directories
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!vendor/*
+--glob=!.venv/*
+--glob=!__pycache__/*
+--glob=!*.pyc
+--glob=!.cache/*
+--glob=!dist/*
+--glob=!build/*
+--glob=!target/*
+
+# Max columns before truncating
+--max-columns=200
+--max-columns-preview
+
+# Colors
+--colors=line:fg:yellow
+--colors=line:style:bold
+--colors=path:fg:green
+--colors=path:style:bold
+--colors=match:fg:red
+--colors=match:style:bold

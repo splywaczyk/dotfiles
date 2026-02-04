@@ -1,0 +1,7 @@
+# Ignore these files when applying dotfiles
+README.md
+LICENSE
+*.tar.gz
+lazygit
+bin/
+.claude/

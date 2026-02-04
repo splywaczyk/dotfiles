@@ -1,0 +1,16 @@
+# fd ignore patterns
+.git/
+node_modules/
+vendor/
+.venv/
+__pycache__/
+*.pyc
+.cache/
+dist/
+build/
+target/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

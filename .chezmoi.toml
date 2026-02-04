@@ -1,0 +1,8 @@
+encryption = "age"
+[age]
+    identity = "~/.config/chezmoi/key.txt"
+    recipient = "age1hz3wcfpa48m3h40kd4t8n9d8vtv6gpx2d5c0x74kkztusaagyalqz3u48f"
+
+[shell]
+    command = "/bin/zsh"
+
