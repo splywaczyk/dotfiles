@@ -38,4 +38,6 @@
     uncommit = reset --soft HEAD~1
 
 [delta]
-	side-by-side = true
+    side-by-side = true
+[credential]
+    helper = store
