@@ -28,7 +28,7 @@
     "files.": true,
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreview": false,
-    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.cursorBlinking": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
