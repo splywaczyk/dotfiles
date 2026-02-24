@@ -1,4 +1,4 @@
-# Dotfiles (KUbuntu)
+# Dotfiles
 
 Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
