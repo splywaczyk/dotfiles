@@ -5,3 +5,6 @@ LICENSE
 lazygit
 bin/
 .claude/
+.gemini/policies/
+.gemini/tmp/
+.gemini/history/

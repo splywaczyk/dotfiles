@@ -32,5 +32,10 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "security.workspace.trust.enabled": true,
-    "remote.autoForwardPortsSource": "hybrid"
+    "remote.autoForwardPortsSource": "hybrid",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
 }

@@ -1,9 +1,9 @@
 #!/bin/bash
-# Dotfiles setup script for KUbuntu
+# Dotfiles setup script
 
 set -e
 
-echo "=== Dotfiles Setup (KUbuntu) ==="
+echo "=== Dotfiles Setup ==="
 
 # Install packages
 echo "=== Installing packages ==="
@@ -45,6 +45,7 @@ cd ~/.local/share/fonts
 curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip 
 unzip JetBrainsMono.zip
 fc-cache -fv
+cd -
 
 # Install WezTerm
 curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /etc/apt/keyrings/wezterm-fury.gpg
@@ -53,8 +54,6 @@ sudo apt update && sudo apt install wezterm
 
 # Apply dotfiles
 echo "=== Applying dotfiles ==="
-chezmoi cd
-git remote set-url --push origin git@github.com:splywaczyk/dotfiles.git
 chezmoi apply
 
 # Update tldr cache

@@ -4,21 +4,21 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Setup on New Machine
 
-### Install chezmoi
-
-```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
-export PATH="$HOME/.local/bin:$PATH"
-chezmoi init https://github.com/splywaczyk/dotfiles
-```
-
 ### Create config for chezmoi
 
 ```bash
 mkdir -p ~/.config/chezmoi
 # Copy key.txt from backup to ~/.config/chezmoi/key.txt
 chmod 600 ~/.config/chezmoi/key.txt
-# Copy config file
+```
+
+### Install chezmoi
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
+chezmoi cd
+chezmoi init https://github.com/splywaczyk/dotfiles
 cp ~/.local/share/chezmoi/.chezmoi.toml ~/.config/chezmoi/
 ```
 
