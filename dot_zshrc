@@ -79,7 +79,9 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker sudo z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker sudo zsh-autosuggestions zsh-syntax-highlighting nvm)
+
+zstyle ':omz:plugins:nvm' lazy yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -154,7 +156,7 @@ export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --style=numbers --line-
 export FZF_CTRL_R_OPTS="--preview '' --preview-window=hidden"
 export FZF_ALT_C_COMMAND='fdfind --type d --hidden --follow --exclude .git'
 
-# FZF theme (Dracula)
+# FZF theme (Gruvbox Dark)
 export FZF_DEFAULT_OPTS='
   --height 60%
   --layout=reverse
@@ -163,10 +165,9 @@ export FZF_DEFAULT_OPTS='
   --prompt="❯ "
   --pointer="▶"
   --marker="✓"
-  --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
-  --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9
-  --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6
-  --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4
+  --color=bg+:#3c3836,bg:#282828,spinner:#fb4934,hl:#fabd2f
+  --color=fg:#ebdbb2,header:#83a598,info:#83a598,pointer:#fb4934
+  --color=marker:#fb4934,fg+:#ebdbb2,prompt:#b8bb26,hl+:#fabd2f
   --bind="ctrl-d:half-page-down,ctrl-u:half-page-up"
   --bind="ctrl-y:execute-silent(echo {+} | xclip -selection clipboard)"
 '
@@ -209,7 +210,8 @@ frg() {
   local file line
   read -r file line <<<"$(rg --line-number --no-heading $@ | fzf -0 -1 | awk -F: '{print $1, $2}')"
   if [[ -n $file ]]; then
-    ${EDITOR:-code} "$file:$line"
+    # VS Code wymaga flagi -g do skoku do konkretnej linii
+    code -g "$file:$line"
   fi
 }
 
