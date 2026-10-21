@@ -1,41 +1,82 @@
 {
-    "workbench.colorTheme": "Summer Night",
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.openRepositoryInParentFolders": "always",
-    "redhat.telemetry.enabled": false,
-    "files.trimTrailingWhitespace": true,
-    "remote.SSH.remotePlatform": {
-        "raspberry": "linux"
-    },
-    "github.copilot.chat.agent.thinkingTool": true,
-    "explorer.confirmDelete": false,
-    "explorer.autoReveal": false,
-    "bazel.enableCodeLens": true,
-    "claudeCode.preferredLocation": "panel",
-    "bazel.buildifierFixOnFormat": true,
-    "bsv.buildifier.executable": "c:\\tools\\buildifier.exe",
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-    "python.analysis.typeCheckingMode": "standard",
-    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
-    "editor.fontLigatures": true,
-    "editor.tabSize": 2,
-    "editor.minimap.enabled": false,
-    "editor.scrollBeyondLastLine": false,
-    "editor.renderWhitespace": "all",
-    "files.autoSave": "onFocusChange",
-    "files.": true,
-    "workbench.startupEditor": "none",
-    "workbench.editor.enablePreview": false,
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "terminal.integrated.cursorBlinking": true,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "security.workspace.trust.enabled": true,
-    "remote.autoForwardPortsSource": "hybrid",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  "git.openRepositoryInParentFolders": "always",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "security.workspace.trust.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.autoReveal": false,
+  "redhat.telemetry.enabled": false,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderWhitespace": "all",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  "python.analysis.typeCheckingMode": "standard",
+  "remote.autoForwardPortsSource": "hybrid",
+  "remote.SSH.remotePlatform": {
+    "raspberry": "linux"
+  },
+  "remote.extensionKind": {
+    "Google.geminicodeassist": [
+      "ui"
+    ],
+    "Google.gemini-cli-vscode-ide-companion": [
+      "ui"
+    ]
+  },
+  "github.copilot.chat.agent.thinkingTool": true,
+  "claudeCode.preferredLocation": "panel",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "geminicodeassist.project": "pioneering-env-vbv0h",
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
+  },
+  "markdownlint.config": {
+    "MD007": {
+      "indent": 4
     }
+  },
+  "diffEditor.codeLens": true,
+  "cSpell.userWords": [
+    "buildfile",
+    "Plywaczyk",
+    "Seweryn",
+    "secpol",
+    "bzlmod",
+    "mkifs"
+  ],
+  "bazel.codeLens.enable": true,
+  "bazel.buildifier.fixOnFormat": true,
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders=false"
+  ],
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "files.associations": {
+    "*.build": "shellscript",
+    "*.sp": "c",
+    "*.bzl": "starlark",
+    "BUILD.bazel": "starlark",
+    "MODULE.bazel": "starlark"
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard"
 }
